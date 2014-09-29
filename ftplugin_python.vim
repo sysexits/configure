@@ -5,3 +5,5 @@ setlocal expandtab
 setlocal softtabstop=4
 setlocal shiftround
 setlocal autoindent
+
+autocmd BufWritePost *.py call Flake8()
