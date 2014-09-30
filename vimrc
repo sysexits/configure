@@ -24,9 +24,11 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
+Plugin 'mileszs/ack.vim' "Better than grep
+Plugin 'git@github.com:scrooloose/syntastic.git' "Syntax checking
 
 " For python support
-" Plugin 'git@github.com:nvie/vim-flake8.git'
+Plugin 'git@github.com:nvie/vim-flake8.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -44,3 +46,10 @@ filetype plugin on
 " 
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" For support ag (The silver searcher)
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" For support syntastic
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_loc_list=1
