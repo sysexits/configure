@@ -2,6 +2,7 @@ if has("syntax")
 	syntax on
 endif
 
+set t_Co=256
 set nu
 set laststatus=2
 set autowrite
@@ -26,9 +27,14 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'mileszs/ack.vim' "Better than grep
 Plugin 'git@github.com:scrooloose/syntastic.git' "Syntax checking
+Plugin 'git@github.com:majutsushi/tagbar.git' "Tagbar
 
 " For python support
 Plugin 'git@github.com:nvie/vim-flake8.git'
+
+" For HTML Support
+Plugin 'git@github.com:tpope/vim-surround.git'
+Plugin 'git@github.com:mattn/emmet-vim.git'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -50,6 +56,8 @@ filetype plugin on
 " For support ag (The silver searcher)
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
-" For support syntastic
-let g:syntastic_enable_signs=1
-let g:syntastic_auto_loc_list=1
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
+" Tagbar toggle
+nmap <C-t> :TagbarToggle<CR>
