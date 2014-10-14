@@ -7,8 +7,3 @@ setlocal shiftround
 setlocal autoindent
 
 autocmd BufWritePost *.py call Flake8()
-
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {}<Esc>i
-inoremap " ""<Esc>i

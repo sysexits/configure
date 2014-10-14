@@ -10,9 +10,3 @@ setlocal hlsearch
 setlocal foldenable
 
 let g:syntastic_javascript_checkers=['jshint'] " Set jshint as checker
-
-inoremap ( ()<Esc>i
-inoremap [ []<Esc>i
-inoremap { {<CR>}<Esc>O
-inoremap " ""<Esc>i
-inoremap ' ''<Esc>i

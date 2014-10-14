@@ -28,6 +28,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'mileszs/ack.vim' "Better than grep
 Plugin 'git@github.com:scrooloose/syntastic.git' "Syntax checking
 Plugin 'git@github.com:majutsushi/tagbar.git' "Tagbar
+Plugin 'git@github.com:vim-scripts/Auto-Pairs.git'
 
 " For python support
 Plugin 'git@github.com:nvie/vim-flake8.git'
