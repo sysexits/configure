@@ -2,6 +2,7 @@ if has("syntax")
 	syntax on
 endif
 
+set encoding=utf-8
 set t_Co=256
 set nu
 set laststatus=2
@@ -14,6 +15,7 @@ set smarttab
 set smartindent
 set ruler
 set incsearch
+set bg=dark
 
 " For vundle setting
 set nocompatible              " be iMproved, required
@@ -37,6 +39,9 @@ Plugin 'git@github.com:nvie/vim-flake8.git'
 Plugin 'git@github.com:tpope/vim-surround.git'
 Plugin 'git@github.com:mattn/emmet-vim.git'
 
+" Airline
+Plugin 'git@github.com:bling/vim-airline.git'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -58,7 +63,15 @@ filetype plugin on
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 let g:user_emmet_install_global = 0
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = 'molokai'
+
+let g:molokai_original = 1
+let g:rehash256 = 1
+
 autocmd FileType html,css EmmetInstall
 
 " Tagbar toggle
-nmap <C-t> :TagbarToggle<CR>
+nmap <C-t><C-t> :TagbarToggle<CR>
